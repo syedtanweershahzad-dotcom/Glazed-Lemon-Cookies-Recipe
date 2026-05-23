@@ -1,0 +1,467 @@
+/* ==========================================================================
+   1. CORE PAGE SETUP & RESET
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #fcfcfc;
+    color: #333333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.recipe-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fdf5f0; /* Creamy peach background color from image */
+    padding: 40px;
+    border-radius: 16px;
+}
+
+/* Decorative Divider Line */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #EAE2DC;
+    margin: 30px 0;
+}
+
+/* ==========================================================================
+   2. HEADER & AUTHOR BLOCKS
+   ========================================================================== */
+.recipe-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+/* Left Image Box Layout */
+.header-left {
+    flex: 0 0 160px;
+}
+
+.cookie-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Right Text Details Content */
+.header-right {
+    flex: 1;
+}
+
+.sub-heading {
+    color: #E25C47;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+h1 {
+    font-family: "Georgia", serif;
+    font-size: 2.6rem;
+    color: #1F3044;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+/* Author Profile Section */
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.author-profile-img {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.author-name {
+    color: #E25C47;
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.stars {
+    color: #2D2D2D;
+    letter-spacing: 1px;
+    margin-left: 4px;
+}
+
+/* Yield Block styling */
+.yields {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   3. METRICS PANEL & ACTION BUTTONS
+   ========================================================================== */
+.time-stats {
+    display: flex;
+    border-left: 2px solid #E25C47;
+    padding-left: 15px;
+    gap: 35px;
+    margin-bottom: 20px;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #8C827D;
+    font-weight: 600;
+}
+
+.time-value {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2D2D2D;
+}
+
+/* Quick Action Print/Review Buttons */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-dark {
+    background-color: #212529;
+    color: #FFFFFF;
+}
+
+.btn-dark:hover {
+    background-color: #343a40;
+}
+
+.recipe-description {
+    font-size: 1.05rem;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   4. EMAIL BOX COMPONENT
+   ========================================================================== */
+.email-box {
+    border: 1px solid #E25C47;
+    border-radius: 24px;
+    padding: 24px 30px;
+    background-color: #FFF6F0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+/* Centered Top Floating Icon */
+.email-icon-badge {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #E25C47;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.email-content {
+    flex: 1;
+}
+
+.email-content h2 {
+    font-family: "Georgia", serif;
+    font-size: 1.6rem;
+    color: #1F3044;
+    margin-bottom: 2px;
+    border: none;
+    padding: 0;
+}
+
+.email-content p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Inline Email Form Styling */
+.email-form {
+    display: flex;
+    background-color: white;
+    border: 1px solid #212529;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 320px;
+}
+
+.email-form input {
+    flex: 1;
+    border: none;
+    padding: 12px 15px;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.email-form button {
+    background-color: #E25C47;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.email-form button:hover {
+    background-color: #c94f3b;
+}
+
+/* ==========================================================================
+   5. COOK MODE SLIDER COMPONENT
+   ========================================================================== */
+.cook-mode-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.cook-mode-text {
+    font-size: 0.95rem;
+    color: #4A4A4A;
+}
+
+/* Switch container layout setup */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slide background surface design */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CCCCCC;
+    transition: .3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+}
+
+input:checked + .slider {
+    background-color: #E25C47;
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   6. INGREDIENTS & CHECKBOX CONTAINER
+   ========================================================================== */
+.ingredients-section {
+    margin-bottom: 40px;
+}
+
+.ingredients-section h2, .recipe-section h2 {
+    font-family: "Georgia", serif;
+    font-size: 2rem;
+    color: #1F3044;
+    border-bottom: 1px solid #EAE2DC;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.ingredient-group {
+    margin-bottom: 25px;
+}
+
+.ingredient-group h3 {
+    font-size: 0.85rem;
+    color: #5C5552;
+    letter-spacing: 0.8px;
+    margin-bottom: 14px;
+}
+
+/* Standard HTML Checkbox Alignment spacing */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    user-select: none;
+    gap: 12px;
+}
+
+.checkbox-container input {
+    width: 18px;
+    height: 18px;
+    accent-color: #E25C47; /* Native slider color theme */
+    cursor: pointer;
+}
+
+/* Text Strikethrough Interaction on Click */
+.checkbox-container input:checked + span {
+    text-decoration: line-through;
+    color: #8C827D;
+}
+
+/* ==========================================================================
+   7. RECIPE INSTRUCTIONS LAYOUT
+   ========================================================================== */
+.instruction-list {
+    list-style: none;
+    counter-reset: steps-counter;
+}
+
+.instruction-list li {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+}
+
+/* Sequential counter badges matching screenshots */
+.instruction-list li::before {
+    content: counter(steps-counter);
+    counter-increment: steps-counter;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #E25C47;
+    color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.glaze-step strong {
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    color: #1F3044;
+}
+
+/* ==========================================================================
+   8. EMBEDDED TEXT PILLS & ANCHORS
+   ========================================================================== */
+.highlight-pill {
+    display: inline-block;
+    padding: 1px 10px;
+    font-size: 0.85rem;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.red-pill {
+    border: 1px solid #E25C47;
+    color: #E25C47;
+    background-color: rgba(226, 92, 71, 0.02);
+}
+
+.underline-link {
+    color: #E25C47;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Responsive adjustment viewports */
+@media (max-width: 680px) {
+    .recipe-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .time-stats {
+        justify-content: center;
+        border-left: none;
+        border-top: 2px solid #E25C47;
+        padding-left: 0;
+        padding-top: 10px;
+    }
+    .email-box {
+        flex-direction: column;
+    }
+    .email-form {
+        width: 100%;
+    }
+    .author {
+        justify-content: center;
+    }
+}
